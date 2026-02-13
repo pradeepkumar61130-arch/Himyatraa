@@ -3,218 +3,329 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HIMyatraa | Luxury Uttarakhand Tours</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<title>Explore Uttarakhand</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
-body{background:#f4f6f9;color:#222}
-
-/* NAVBAR */
-nav{
-position:fixed;
-width:100%;
-top:0;
-background:rgba(0,0,0,0.7);
-padding:15px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-color:#fff;
-z-index:1000;
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#f4f4f4;
+scroll-behavior:smooth;
 }
-nav h2 span:first-child{color:orange}
-nav h2 span:last-child{color:#00aaff}
-nav a{color:white;text-decoration:none;margin-left:20px;font-weight:500}
 
-/* HERO */
 header{
-height:100vh;
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
-url('https://images.unsplash.com/photo-1605640840605-14ac1855827b');
-background-size:cover;
-background-position:center;
-display:flex;
-align-items:center;
-justify-content:center;
+background:#0a3d62;
+color:white;
+padding:15px;
 text-align:center;
-color:white;
-padding:0 20px;
 }
-header h1{font-size:3.5rem;font-weight:700}
-header p{margin:20px 0;font-size:1.2rem}
-.btn{
-display:inline-block;
-padding:14px 30px;
-background:#ff7b00;
+
+nav{
+background:#1e3799;
+padding:10px;
+text-align:center;
+}
+
+nav a{
 color:white;
-border-radius:30px;
+margin:0 15px;
 text-decoration:none;
-transition:0.3s;
+font-weight:bold;
 }
-.btn:hover{background:#e65c00}
 
-/* SECTION */
-section{padding:80px 8%}
-h2{text-align:center;font-size:2.2rem;margin-bottom:50px}
+section{
+padding:40px 20px;
+text-align:center;
+}
 
-/* DESTINATIONS */
+h2{
+color:#0a3d62;
+}
+
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
 }
+
 .card{
 background:white;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-transition:0.4s;
-}
-.card:hover{transform:translateY(-10px)}
-.card img{width:100%;height:220px;object-fit:cover}
-.card h3{text-align:center;padding:20px;font-weight:600}
-
-/* PACKAGES */
-.packages{
-display:flex;
-flex-wrap:wrap;
-gap:25px;
-justify-content:center;
-}
-.package{
-background:white;
-padding:40px;
-width:280px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
-text-align:center;
-}
-.package h3{margin-bottom:15px}
-
-/* INQUIRY FORM */
-form{
-max-width:600px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:20px;
-}
-input,textarea{
-padding:15px;
 border-radius:10px;
-border:1px solid #ccc;
-font-size:16px;
-}
-button{
-padding:15px;
-background:#00aaff;
-color:white;
-border:none;
-border-radius:30px;
-font-size:16px;
-cursor:pointer;
-}
-button:hover{background:#008ed6}
-
-/* MAP */
-.map{
-margin-top:50px;
-border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
 }
 
-/* FOOTER */
-footer{
-background:#111;
-color:white;
-text-align:center;
-padding:30px;
-margin-top:60px;
+.card:hover{
+transform:scale(1.05);
 }
 
-/* WHATSAPP */
+.card img{
+width:100%;
+height:200px;
+object-fit:cover;
+}
+
+.card-content{
+padding:15px;
+}
+
+.card h3{
+margin:0;
+color:#0a3d62;
+}
+
+.card p{
+font-size:14px;
+color:#555;
+margin-top:8px;
+}
+
+/* Buttons */
 .whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
 background:#25D366;
 color:white;
-padding:15px 20px;
-border-radius:50px;
+padding:15px;
+border-radius:50%;
+font-size:20px;
 text-decoration:none;
-font-weight:600;
-box-shadow:0 8px 20px rgba(0,0,0,0.3);
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+.call{
+position:fixed;
+bottom:80px;
+right:20px;
+background:#e84118;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+text-decoration:none;
+box-shadow:0 5px 10px rgba(0,0,0,0.3);
+}
+
+footer{
+background:#0a3d62;
+color:white;
+padding:20px;
+margin-top:40px;
 }
 </style>
 </head>
 
 <body>
 
-<nav>
-<h2><span>HIM</span><span>yatraa</span></h2>
-<div>
-<a href="#destinations">Destinations</a>
-<a href="#packages">Packages</a>
-<a href="#contact">Contact</a>
-</div>
-</nav>
-
 <header>
-<div>
-<h1>Luxury Tours in Uttarakhand</h1>
-<p>Char Dham • Honeymoon • Family Trips • Taxi Services</p>
-<a href="#contact" class="btn">Book Your Trip</a>
-</div>
+<h1>Explore Beautiful Uttarakhand</h1>
+<p>Your Travel Partner</p>
 </header>
 
-<section id="destinations">
-<h2>Top Destinations</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1627894481132-3bcfcdff1c7c"><h3>Kedarnath</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1595814436568-5c2f4b6e0d9a"><h3>Badrinath</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1565026057447-bc90b4b5d1a3"><h3>Nainital</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><h3>Mussoorie</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1549887534-4d6c04f1a0d2"><h3>Auli</h3></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1587392380660-8e1a01fb9b31"><h3>Rishikesh</h3></div>
-</div>
-</section>
+<nav>
+<a href="#destinations">Destinations</a>
+<a href="#contact">Contact</a>
+</nav>
 
-<section id="packages">
-<h2>Premium Tour Packages</h2>
-<div class="packages">
-<div class="package"><h3>Char Dham Yatra</h3><p>Complete spiritual journey with hotel & transport.</p></div>
-<div class="package"><h3>Honeymoon Special</h3><p>Romantic luxury stay in hills.</p></div>
-<div class="package"><h3>Family Vacation</h3><p>Comfortable & affordable family tour plans.</p></div>
-<div class="package"><h3>Taxi Service</h3><p>Safe & reliable taxi across Uttarakhand.</p></div>
+<section id="destinations">
+<h2>40 Beautiful Destinations of Uttarakhand</h2>
+<div class="grid">
+
+<script>
+const places = [
+{
+name:"Kedarnath",
+desc:"Sacred Shiva temple in Himalayas. Best time: May–Oct."
+},
+{
+name:"Badrinath",
+desc:"Famous Char Dham temple of Lord Vishnu. Best time: May–Oct."
+},
+{
+name:"Gangotri",
+desc:"Origin of River Ganga pilgrimage site. Best time: May–Oct."
+},
+{
+name:"Yamunotri",
+desc:"Source of River Yamuna and holy temple. Best time: May–Oct."
+},
+{
+name:"Haridwar",
+desc:"Holy city famous for Ganga Aarti. Best time: Oct–March."
+},
+{
+name:"Rishikesh",
+desc:"Yoga capital & river rafting hub. Best time: Sept–April."
+},
+{
+name:"Nainital",
+desc:"Beautiful lake city surrounded by hills. Best time: All year."
+},
+{
+name:"Mussoorie",
+desc:"Queen of Hills with scenic views. Best time: March–June."
+},
+{
+name:"Auli",
+desc:"India’s famous skiing destination. Best time: Dec–Feb."
+},
+{
+name:"Jim Corbett",
+desc:"Famous national park for tiger safari. Best time: Nov–June."
+},
+{
+name:"Chopta",
+desc:"Mini Switzerland of India. Best time: March–May."
+},
+{
+name:"Tungnath",
+desc:"Highest Shiva temple in the world. Best time: May–Oct."
+},
+{
+name:"Deoria Tal",
+desc:"Lake with Himalayan reflection views. Best time: March–June."
+},
+{
+name:"Munsiyari",
+desc:"Gateway to Panchachuli peaks. Best time: April–June."
+},
+{
+name:"Kanatal",
+desc:"Peaceful hill station near Mussoorie. Best time: All year."
+},
+{
+name:"Chakrata",
+desc:"Quiet hill town with waterfalls. Best time: March–June."
+},
+{
+name:"Dhanaulti",
+desc:"Eco park and peaceful retreat. Best time: All year."
+},
+{
+name:"Ranikhet",
+desc:"Army town with scenic beauty. Best time: March–June."
+},
+{
+name:"Almora",
+desc:"Cultural hill town of Kumaon. Best time: All year."
+},
+{
+name:"Kausani",
+desc:"Panoramic Himalayan sunset views. Best time: March–May."
+},
+{
+name:"Valley of Flowers",
+desc:"UNESCO flower valley in monsoon. Best time: July–Sept."
+},
+{
+name:"Hemkund Sahib",
+desc:"Sacred Sikh pilgrimage lake. Best time: June–Sept."
+},
+{
+name:"Pithoragarh",
+desc:"Little Kashmir of Uttarakhand. Best time: March–June."
+},
+{
+name:"Binsar",
+desc:"Wildlife sanctuary & mountain views. Best time: Oct–March."
+},
+{
+name:"Lansdowne",
+desc:"Peaceful cantonment hill station. Best time: All year."
+},
+{
+name:"Tehri Lake",
+desc:"Famous for water sports & dam. Best time: Oct–June."
+},
+{
+name:"Bhimtal",
+desc:"Lake town near Nainital. Best time: All year."
+},
+{
+name:"Sattal",
+desc:"Group of seven freshwater lakes. Best time: All year."
+},
+{
+name:"Khirsu",
+desc:"Hidden gem with snow views. Best time: March–June."
+},
+{
+name:"Panch Kedar",
+desc:"Five sacred Shiva temples trek. Best time: May–Oct."
+},
+{
+name:"Gaumukh",
+desc:"Source glacier of River Ganga. Best time: May–Oct."
+},
+{
+name:"Kedarkantha",
+desc:"Popular winter trekking peak. Best time: Dec–April."
+},
+{
+name:"Roopkund",
+desc:"Mystery skeleton lake trek. Best time: May–June."
+},
+{
+name:"Harsil",
+desc:"Beautiful apple valley near Gangotri. Best time: April–June."
+},
+{
+name:"Uttarkashi",
+desc:"Spiritual & trekking hub town. Best time: All year."
+},
+{
+name:"Rudraprayag",
+desc:"Confluence of Alaknanda & Mandakini rivers. Best time: All year."
+},
+{
+name:"Devprayag",
+desc:"Origin point of River Ganga. Best time: Oct–April."
+},
+{
+name:"Adi Badri",
+desc:"Ancient temple complex of Vishnu. Best time: All year."
+},
+{
+name:"Kotdwar",
+desc:"Gateway to Garhwal region. Best time: Oct–March."
+},
+{
+name:"Lohaghat",
+desc:"Peaceful hill town in Champawat. Best time: March–June."
+}
+];
+
+places.forEach(place=>{
+document.write(`
+<div class="card">
+<img src="https://source.unsplash.com/600x400/?${place.name},uttarakhand">
+<div class="card-content">
+<h3>${place.name}</h3>
+<p>${place.desc}</p>
+</div>
+</div>
+`);
+});
+</script>
+
 </div>
 </section>
 
 <section id="contact">
-<h2>Send Inquiry</h2>
-<form>
-<input type="text" placeholder="Your Name" required>
-<input type="tel" placeholder="Your Phone Number" required>
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button type="submit">Submit Inquiry</button>
-</form>
-
-<div class="map">
-<iframe src="https://www.google.com/maps?q=Uttarakhand&output=embed"
-width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
-</iframe>
-</div>
+<h2>Contact Us</h2>
+<p>Call or WhatsApp us for bookings</p>
+<p><b>📞 +91 8679490106</b></p>
 </section>
 
-<footer>
-<p>📞 Call / WhatsApp: 8679490106</p>
-<p>© 2026 HIMyatraa Tours & Travels | All Rights Reserved</p>
-</footer>
+<a href="tel:+918679490106" class="call">📞</a>
+<a href="https://wa.me/918679490106" class="whatsapp">💬</a>
 
-<a class="whatsapp" href="https://wa.me/918679490106" target="_blank">
-WhatsApp Us
-</a>
+<footer>
+<p>© 2025 Explore Uttarakhand | Designed by Pradeep</p>
+</footer>
 
 </body>
 </html>
