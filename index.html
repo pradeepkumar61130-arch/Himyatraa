@@ -1,557 +1,220 @@
-Mock data for HIMyatraa Tour and Travels
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HIMyatraa | Luxury Uttarakhand Tours</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-export const contactInfo = {
-  phone: '86794 90106',
-  whatsapp: '86794 90106',
-  email: 'info@himyatraa.com',
-  address: 'Uttarakhand, India'
-};
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#f4f6f9;color:#222}
 
-export const destinations = [
-  // POPULAR HILL STATIONS
-  {
-    id: 1,
-    name: 'Nainital',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1610715936287-6c2ad208cdbf',
-    description: 'Nainital, the \"Lake District of India,\" is a charming hill station centered around the beautiful Naini Lake. Surrounded by mountains, it offers boating, cable car rides to Snow View Point, and visits to Naina Devi Temple. The Mall Road is perfect for shopping and dining. Ideal for families and honeymooners.',
-    highlights: ['Naini Lake', 'Snow View Point', 'Naina Devi Temple', 'Mall Road', 'Tiffin Top'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 2,
-    name: 'Mussoorie',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1615966192539-f1731963b19a',
-    description: 'Known as the \"Queen of Hills,\" Mussoorie is a popular hill station offering stunning Himalayan views. Visit Kempty Falls, Gun Hill, Lal Tibba, and the scenic Mall Road. The colonial architecture and pleasant weather make it perfect for a relaxing getaway.',
-    highlights: ['Kempty Falls', 'Gun Hill', 'Mall Road', 'Lal Tibba', 'Camel\'s Back Road'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 3,
-    name: 'Ranikhet',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1634827181140-6ed3520f57c4',
-    description: 'Ranikhet is a peaceful hill station surrounded by dense deodar forests and panoramic Himalayan views. Visit Chaubatia Gardens, Jhula Devi Temple, and the Golf Course. It\'s perfect for nature lovers seeking tranquility away from crowded tourist spots.',
-    highlights: ['Chaubatia Gardens', 'Jhula Devi Temple', 'Golf Course', 'Bhalu Dam', 'Mankameshwar Temple'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 4,
-    name: 'Kausani',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1702053285107-b5a90aa97171',
-    description: 'Called the \"Switzerland of India,\" Kausani offers a 300-km panoramic view of Himalayan peaks including Nanda Devi, Trishul, and Panchachuli. Mahatma Gandhi was mesmerized by this place. Visit Anasakti Ashram, tea gardens, and Rudradhari Falls.',
-    highlights: ['Sunrise View Point', 'Anasakti Ashram', 'Tea Gardens', 'Rudradhari Falls', 'Baijnath Temple'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 5,
-    name: 'Almora',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1615966192539-f1731963b19a',
-    description: 'Almora is a historic town known for its cultural heritage, temples, and handicrafts. The famous Bal Mithai sweet originates here. Visit Katarmal Sun Temple, Bright End Corner, Chitai Golu Devta Temple, and Jageshwar Dham. Beautiful Himalayan views from everywhere.',
-    highlights: ['Katarmal Sun Temple', 'Bright End Corner', 'Chitai Golu Devta', 'Jageshwar Dham', 'Kasar Devi'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 6,
-    name: 'Lansdowne',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1615966192539-f1731963b19a',
-    description: 'Lansdowne is a quiet, clean hill station away from crowds. It\'s the headquarters of Garhwal Rifles. Visit Bhulla Tal lake, Tip-in-Top viewpoint, and St. Mary\'s Church. The serene environment and military history make it unique.',
-    highlights: ['Bhulla Tal', 'Tip-in-Top', 'St. Mary Church', 'Darwan Singh Museum', 'Tarkeshwar Mahadev'],
-    bestTime: 'April to July, September to November'
-  },
-  {
-    id: 7,
-    name: 'Dhanaulti',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1634827181140-6ed3520f57c4',
-    description: 'Dhanaulti is a small, peaceful hill station near Mussoorie, surrounded by deodar forests. Visit Eco Parks, Surkanda Devi Temple, and enjoy adventure activities. It\'s perfect for a quiet holiday away from tourist rush.',
-    highlights: ['Eco Park', 'Surkanda Devi Temple', 'Deodar Forests', 'Adventure Activities', 'Apple Orchards'],
-    bestTime: 'March to June, September to November'
-  },
+/* NAVBAR */
+nav{
+position:fixed;
+width:100%;
+top:0;
+background:rgba(0,0,0,0.7);
+padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+z-index:1000;
+}
+nav h2 span:first-child{color:orange}
+nav h2 span:last-child{color:#00aaff}
+nav a{color:white;text-decoration:none;margin-left:20px;font-weight:500}
 
-  // SPIRITUAL & RELIGIOUS
-  {
-    id: 8,
-    name: 'Rishikesh',
-    category: 'spiritual',
-    image: 'https://images.unsplash.com/photo-1606220975728-f94e0d9ed642',
-    description: 'Rishikesh, the \"Yoga Capital of the World,\" is where spirituality meets adventure. Witness the mesmerizing Ganga Aarti, walk across Laxman Jhula and Ram Jhula, practice yoga, and try river rafting. It\'s a perfect blend of peace and thrill.',
-    highlights: ['Ganga Aarti', 'Laxman Jhula', 'River Rafting', 'Ram Jhula', 'Beatles Ashram', 'Triveni Ghat'],
-    bestTime: 'September to November, February to April'
-  },
-  {
-    id: 9,
-    name: 'Haridwar',
-    category: 'spiritual',
-    image: 'https://images.unsplash.com/photo-1649147313351-c86537fda0eb',
-    description: 'Haridwar, one of the seven holiest places in Hinduism, is where the Ganges descends from mountains to plains. The evening Ganga Aarti at Har Ki Pauri is unforgettable. Visit Mansa Devi Temple, Chandi Devi Temple, and take a holy dip in the Ganges.',
-    highlights: ['Har Ki Pauri', 'Ganga Aarti', 'Mansa Devi Temple', 'Chandi Devi Temple', 'Maya Devi Temple'],
-    bestTime: 'October to February'
-  },
-  {
-    id: 10,
-    name: 'Badrinath Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1712733900711-d0b929d0d7cc',
-    description: 'Badrinath is one of the Char Dham and one of the 108 Divya Desams dedicated to Lord Vishnu. Located at 3,300m altitude, this ancient temple is surrounded by majestic mountains. Visit Tapt Kund, Brahma Kapal, and Mana Village (last Indian village near Tibet border).',
-    highlights: ['Badrinath Temple', 'Tapt Kund', 'Brahma Kapal', 'Mana Village', 'Vasudhara Falls'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 11,
-    name: 'Kedarnath Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1649147313351-c86537fda0eb',
-    description: 'Kedarnath, one of the 12 Jyotirlingas of Lord Shiva, is located at 3,583m altitude. The trek to Kedarnath or helicopter ride offers breathtaking mountain views. The temple, rebuilt after 2013 floods, stands as a symbol of faith and resilience.',
-    highlights: ['Kedarnath Temple', 'Bhairavnath Temple', 'Gandhi Sarovar', 'Vasuki Tal', 'Chorabari Glacier'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 12,
-    name: 'Gangotri Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1708266942203-c731118e1f94',
-    description: 'Gangotri, the origin of River Ganga, is one of the Char Dham. At 3,100m altitude, the temple is dedicated to Goddess Ganga. The surrounding peaks and the sound of the river create a divine atmosphere. Nearby Gaumukh Glacier is the actual source.',
-    highlights: ['Gangotri Temple', 'Gaumukh Glacier', 'Bhagirath Shila', 'Pandava Gufa', 'Surya Kund'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 13,
-    name: 'Yamunotri Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1736914322688-89be02b72249',
-    description: 'Yamunotri, the source of River Yamuna, is the first of the Char Dham. Located at 3,293m, the temple is dedicated to Goddess Yamuna. The hot water springs at Surya Kund are believed to be therapeutic. The trek through mountains is spiritually enriching.',
-    highlights: ['Yamunotri Temple', 'Surya Kund', 'Divya Shila', 'Saptrishi Kund', 'Hanuman Chatti'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 14,
-    name: 'Tungnath Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1623952146070-f13fc902f769',
-    description: 'Tungnath is the highest Shiva temple in the world at 3,680m and one of the Panch Kedar. The trek from Chopta is moderate and scenic. Further ahead is Chandrashila peak offering 360-degree Himalayan views including Nanda Devi, Trishul, and Chaukhamba.',
-    highlights: ['Tungnath Temple', 'Chandrashila Trek', 'Deoria Tal', '360° Himalayan View', 'Panch Kedar'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 15,
-    name: 'Jageshwar Dham',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1612438214708-f428a707dd4e',
-    description: 'Jageshwar Dham is an ancient temple complex with 124 stone temples dating back to 9th-13th century. Dedicated to Lord Shiva, it\'s one of the 12 Jyotirlingas. The dense deodar forest surroundings create a mystical atmosphere. Archaeological and spiritual significance make it unique.',
-    highlights: ['124 Ancient Temples', 'Jageshwar Mahadev', 'Archaeological Museum', 'Deodar Forest', 'Vriddha Jageshwar'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 16,
-    name: 'Kainchi Dham',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1621861189516-3f4c3a3c98ef',
-    description: 'Kainchi Dham is the famous ashram and temple of Neem Karoli Baba (Maharaj-ji) near Nainital. Devotees from around the world visit this peaceful place. The annual Bhandara on June 15 attracts thousands. Apple\'s Steve Jobs and Mark Zuckerberg visited here seeking inspiration.',
-    highlights: ['Hanuman Temple', 'Neem Karoli Baba Ashram', 'Peaceful Environment', 'Annual Bhandara', 'Silicon Valley Connection'],
-    bestTime: 'All year, June 15 for Bhandara'
-  },
-  {
-    id: 17,
-    name: 'Neelkanth Mahadev Temple',
-    category: 'temple',
-    image: 'https://images.unsplash.com/photo-1708266942203-c731118e1f94',
-    description: 'Located 32 km from Rishikesh at 1,675m altitude, Neelkanth Mahadev Temple is where Lord Shiva drank poison during Samudra Manthan. The scenic location amidst forests and mountains, along with the legend, attracts devotees. The drive through mountain roads is beautiful.',
-    highlights: ['Neelkanth Mahadev Temple', 'Mountain Views', 'Sacred Legend', 'Forest Trek', 'Natural Springs'],
-    bestTime: 'February to June, September to November'
-  },
+/* HERO */
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url('https://images.unsplash.com/photo-1605640840605-14ac1855827b');
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:0 20px;
+}
+header h1{font-size:3.5rem;font-weight:700}
+header p{margin:20px 0;font-size:1.2rem}
+.btn{
+display:inline-block;
+padding:14px 30px;
+background:#ff7b00;
+color:white;
+border-radius:30px;
+text-decoration:none;
+transition:0.3s;
+}
+.btn:hover{background:#e65c00}
 
-  // ADVENTURE & UNEXPLORED
-  {
-    id: 18,
-    name: 'Auli',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1598186004076-e062b6555c53',
-    description: 'Auli is India\'s premier skiing destination with snow-covered slopes and Asia\'s longest ropeway (4km). In summer, it transforms into lush meadows. Views of Nanda Devi, Mana Parvat, and Kamet are spectacular. Perfect for skiing, trekking, and cable car rides.',
-    highlights: ['Skiing', 'Auli Ropeway', 'Gurso Bugyal', 'Nanda Devi View', 'Artificial Lake', 'Joshimath'],
-    bestTime: 'November to March (Skiing), April to June (Trekking)'
-  },
-  {
-    id: 19,
-    name: 'Chopta',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5',
-    description: 'Chopta, the \"Mini Switzerland of India,\" is the base for Tungnath-Chandrashila trek. Lush meadows, rhododendron forests, and bird watching make it a nature paradise. Also starting point for Deoria Tal trek. Camping under starry skies is magical.',
-    highlights: ['Tungnath Trek', 'Chandrashila Trek', 'Deoria Tal', 'Camping', 'Bird Watching', 'Ukhimath'],
-    bestTime: 'April to November'
-  },
-  {
-    id: 20,
-    name: 'Munsyari',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1578952258885-6ee0651294e6',
-    description: 'Munsyari, at the base of Panchachuli peaks, is an offbeat destination offering stunning mountain views. Gateway to Milam, Ralam, and Namik glaciers. Experience tribal culture, try local cuisine, and trek through pristine forests. A paradise for adventure enthusiasts.',
-    highlights: ['Khaliya Top', 'Maheshwari Kund', 'Nanda Devi Temple', 'Panchachuli View', 'Tribal Villages'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 21,
-    name: 'Valley of Flowers',
-    category: 'nature',
-    image: 'https://images.unsplash.com/photo-1634827181140-6ed3520f57c4',
-    description: 'Valley of Flowers is a UNESCO World Heritage Site bursting with alpine flowers in July-August. The trek through this valley is like walking through a colorful dream. Combined with Hemkund Sahib, it\'s a spiritual and nature trek. Over 600 flower species bloom here.',
-    highlights: ['Alpine Flowers', 'UNESCO Site', 'Hemkund Sahib', 'Trekking', 'Rare Flora', 'Photography'],
-    bestTime: 'July to September'
-  },
-  {
-    id: 22,
-    name: 'Hemkund Sahib',
-    category: 'spiritual',
-    image: 'https://images.unsplash.com/photo-1712733900711-d0b929d0d7cc',
-    description: 'Hemkund Sahib, at 4,632m altitude, is a sacred Sikh pilgrimage site beside a glacial lake surrounded by seven peaks. Guru Gobind Singh meditated here. The trek is challenging but spiritually rewarding. The crystal-clear lake and Laxman Temple add to its divine aura.',
-    highlights: ['Gurudwara', 'Hemkund Lake', 'Laxman Temple', 'Seven Peaks', 'Spiritual Trek', 'Lokpal Lake'],
-    bestTime: 'May to October'
-  },
-  {
-    id: 23,
-    name: 'Pithoragarh',
-    category: 'unexplored',
-    image: 'https://images.unsplash.com/photo-1702053285107-b5a90aa97171',
-    description: 'Pithoragarh, called \"Little Kashmir,\" is near Nepal and Tibet borders. The fort, temples, and surrounding glaciers make it unique. Gateway to Kailash Mansarovar Yatra. Askot Wildlife Sanctuary, Kapileshwar Cave, and Chandak are nearby attractions.',
-    highlights: ['Pithoragarh Fort', 'Askot Wildlife Sanctuary', 'Kapileshwar Cave', 'Chandak', 'Panchachuli View'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 24,
-    name: 'Adi Kailash & Om Parvat',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1649147313351-c86537fda0eb',
-    description: 'Adi Kailash (Chhota Kailash) is a sacred peak resembling Mount Kailash. Om Parvat naturally displays \"ॐ\" in snow. This difficult trek near Tibet border offers spiritual and adventure experiences. Parvati Mukharvat, Jonglingkong Lake, and Kuti village are highlights.',
-    highlights: ['Adi Kailash', 'Om Parvat', 'Parvati Mukharvat', 'Jonglingkong Lake', 'Kuti Village', 'Tibet Border'],
-    bestTime: 'June to September'
-  },
-  {
-    id: 25,
-    name: 'Chakrata',
-    category: 'unexplored',
-    image: 'https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5',
-    description: 'Chakrata is an untouched cantonment town offering peace and natural beauty. Tiger Falls (highest waterfall in Uttarakhand), Budher Cave, Deoban, and Chilmiri Neck are must-visits. Snow in winter, pleasant summers. Perfect for offbeat travelers seeking solitude.',
-    highlights: ['Tiger Falls', 'Budher Cave', 'Deoban', 'Chilmiri Neck', 'Kanasar', 'Peaceful Environment'],
-    bestTime: 'April to June, September to November'
-  },
+/* SECTION */
+section{padding:80px 8%}
+h2{text-align:center;font-size:2.2rem;margin-bottom:50px}
 
-  // WILDLIFE & NATURE
-  {
-    id: 26,
-    name: 'Jim Corbett National Park',
-    category: 'wildlife',
-    image: 'https://images.unsplash.com/photo-1647617870380-efc71009fa2c',
-    description: 'Jim Corbett is India\'s oldest national park, famous for Bengal Tigers. Spread across 520 sq km, it offers jeep safaris, elephant safaris, and bird watching. Dhikala zone is the most popular. Visit Corbett Falls and Garjiya Devi Temple nearby. A must for wildlife photographers.',
-    highlights: ['Tiger Safari', 'Dhikala Zone', 'Corbett Waterfall', 'Bird Watching', 'Elephant Safari', 'Garjiya Temple'],
-    bestTime: 'November to June'
-  },
-  {
-    id: 27,
-    name: 'Rajaji National Park',
-    category: 'wildlife',
-    image: 'https://images.unsplash.com/photo-1677915762983-c64fc9152c45',
-    description: 'Rajaji National Park, spread across Dehradun, Haridwar, and Pauri, is home to elephants, tigers, leopards, and over 400 bird species. The park is named after C. Rajagopalachari. Jeep safari through Sal forests, spotting wildlife, and nature walks are highlights.',
-    highlights: ['Elephant Herds', 'Tiger Sighting', 'Jeep Safari', 'Bird Watching', 'Chilla Zone', 'Motichur'],
-    bestTime: 'November to June'
-  },
-  {
-    id: 28,
-    name: 'Binsar Wildlife Sanctuary',
-    category: 'nature',
-    image: 'https://images.unsplash.com/photo-1702053285107-b5a90aa97171',
-    description: 'Binsar Wildlife Sanctuary offers a 300 km view of Himalayan peaks including Nanda Devi, Kedarnath, and Chaukhamba. Oak and rhododendron forests are home to leopards, barking deer, and 200+ bird species. Zero Point is the best viewpoint. Peaceful nature retreat.',
-    highlights: ['Zero Point', 'Binsar Mahadev Temple', 'Wildlife Sanctuary', '300km Himalayan View', 'Bird Watching'],
-    bestTime: 'April to June, September to November'
-  },
+/* DESTINATIONS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+.card{
+background:white;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.4s;
+}
+.card:hover{transform:translateY(-10px)}
+.card img{width:100%;height:220px;object-fit:cover}
+.card h3{text-align:center;padding:20px;font-weight:600}
 
-  // LAKES & WATERFALLS
-  {
-    id: 29,
-    name: 'Sattal',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1586255028095-d93edb74e412',
-    description: 'Sattal, meaning \"seven lakes,\" is a cluster of interconnected freshwater lakes surrounded by dense forests. Perfect for kayaking, bird watching, and nature walks. Less crowded than Nainital. Butterfly species and migratory birds make it a biodiversity hotspot.',
-    highlights: ['Seven Lakes', 'Kayaking', 'Bird Watching', 'Butterfly Garden', 'Nature Walks', 'Oak Forests'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 30,
-    name: 'Bhimtal',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1712201649803-ab1b13dae600',
-    description: 'Bhimtal, larger than Nainital Lake, has an island with aquarium in the center. Named after Bhima from Mahabharata. Boating, paragliding, and visiting Bhimeshwar Temple are popular activities. Less commercial than Nainital, offering peaceful lake views.',
-    highlights: ['Bhimtal Lake', 'Island Aquarium', 'Bhimeshwar Temple', 'Boating', 'Paragliding', 'Hidimba Parvat'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 31,
-    name: 'Kempty Falls',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1669291481687-026754880645',
-    description: 'Kempty Falls, 15 km from Mussoorie, is one of Uttarakhand\'s most popular waterfalls. At 40 feet height, the cascading water creates a refreshing mist. Swimming in the pool, enjoying local snacks, and ropeway ride are attractions. Can get crowded in peak season.',
-    highlights: ['Waterfall', 'Swimming Pool', 'Ropeway', 'Mountain Views', 'Local Food Stalls'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 32,
-    name: 'Tiger Falls',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1643323637951-9c18b984aae9',
-    description: 'Tiger Falls near Chakrata is Uttarakhand\'s highest direct waterfall at 312 feet. The 7 km trek through dense forests is adventurous. The powerful cascade and natural pool at the base are mesmerizing. Less crowded, perfect for nature lovers and photographers.',
-    highlights: ['Highest Waterfall', 'Trekking', 'Natural Pool', 'Dense Forests', 'Photography', 'Offbeat'],
-    bestTime: 'April to June, September to November'
-  },
-  {
-    id: 33,
-    name: 'Dodital Lake',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1601622256416-d7f757f99eb2',
-    description: 'Dodital, at 3,024m, is a pristine lake believed to be Lord Ganesha\'s birthplace. The trek from Sangam Chatti passes through oak forests, meadows, and streams. Himalayan trout fish and rare birds make it ecologically significant. Base for Darwa Top trek.',
-    highlights: ['Pristine Lake', 'Trekking', 'Himalayan Trout', 'Ganesha Legend', 'Darwa Pass', 'Bird Watching'],
-    bestTime: 'April to June, September to November'
-  },
+/* PACKAGES */
+.packages{
+display:flex;
+flex-wrap:wrap;
+gap:25px;
+justify-content:center;
+}
+.package{
+background:white;
+padding:40px;
+width:280px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+text-align:center;
+}
+.package h3{margin-bottom:15px}
 
-  // TREKKING DESTINATIONS
-  {
-    id: 34,
-    name: 'Kedarkantha Trek',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1598186004076-e062b6555c53',
-    description: 'Kedarkantha is one of the most popular winter treks in India. At 12,500 feet, the summit offers 360-degree views of Himalayan peaks. Snow-covered trails, frozen lakes, and starry nights make it magical. Suitable for beginners with moderate fitness.',
-    highlights: ['Winter Trekking', 'Summit View', 'Snow Trek', 'Camping', 'Juda-Ka-Talab', '360° Mountain View'],
-    bestTime: 'December to April'
-  },
-  {
-    id: 35,
-    name: 'Roopkund Trek',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1643323465604-49e3ccbdd4ff',
-    description: 'Roopkund, the \"Mystery Lake,\" is famous for ancient human skeletons visible when ice melts. At 15,696 feet, this challenging trek passes through Bedni Bugyal, Ghairoli Patal, and offers stunning Trishul and Nanda Ghunti views. A mysterious and adventurous trek.',
-    highlights: ['Mystery Lake', 'Human Skeletons', 'Bedni Bugyal', 'Challenging Trek', 'Trishul View', 'Alpine Flora'],
-    bestTime: 'May to June, September to October'
-  },
-  {
-    id: 36,
-    name: 'Har Ki Dun',
-    category: 'adventure',
-    image: 'https://images.unsplash.com/photo-1664135338319-124c3d3e4ae8',
-    description: 'Har Ki Dun, the \"Valley of Gods,\" is a cradle-shaped hanging valley at 3,566m. The trek passes through ancient villages, pine forests, and alpine meadows. Associated with Mahabharata, local legend says the Pandavas ascended to heaven from here. Moderate difficulty, highly scenic.',
-    highlights: ['Valley Trek', 'Ancient Villages', 'Swargarohini Peak', 'Ruinsara Tal', 'Mahabharata Legend', 'Pristine Nature'],
-    bestTime: 'April to June, September to November'
-  },
+/* INQUIRY FORM */
+form{
+max-width:600px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:20px;
+}
+input,textarea{
+padding:15px;
+border-radius:10px;
+border:1px solid #ccc;
+font-size:16px;
+}
+button{
+padding:15px;
+background:#00aaff;
+color:white;
+border:none;
+border-radius:30px;
+font-size:16px;
+cursor:pointer;
+}
+button:hover{background:#008ed6}
 
-  // MORE DESTINATIONS
-  {
-    id: 37,
-    name: 'Dehradun',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1634827181140-6ed3520f57c4',
-    description: 'Dehradun, the capital of Uttarakhand, is known for educational institutions, Basmati rice, and litchis. Visit Robber\'s Cave, Sahastradhara, Malsi Deer Park, and FRI Museum. It\'s the gateway to Mussoorie, Rishikesh, and Haridwar. Pleasant weather year-round.',
-    highlights: ['Robber\'s Cave', 'Sahastradhara', 'Malsi Deer Park', 'FRI Museum', 'Clock Tower', 'Mindrolling Monastery'],
-    bestTime: 'February to April, September to November'
-  },
-  {
-    id: 38,
-    name: 'Auli Artificial Lake',
-    category: 'sightseeing',
-    image: 'https://images.unsplash.com/photo-1601622256416-d7f757f99eb2',
-    description: 'The Auli Artificial Lake is one of the world\'s highest man-made lakes at 2,880m. Built to support snow-making for skiing. The reflection of surrounding peaks in the lake is stunning. A marvel of engineering amidst natural beauty.',
-    highlights: ['Artificial Lake', 'Highest Man-made Lake', 'Skiing Support', 'Mountain Reflection', 'Engineering Marvel'],
-    bestTime: 'October to March'
-  },
-  {
-    id: 39,
-    name: 'Pauri',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1702053285107-b5a90aa97171',
-    description: 'Pauri is a peaceful hill station offering panoramic Himalayan views from Kandoliya Temple viewpoint. Visit Khirsu, Kyunkaleshwar Mahadev, and Tarkeshwar Mahadev. Less commercialized, perfect for those seeking tranquility. Gateway to several treks.',
-    highlights: ['Kandoliya Temple', 'Khirsu', 'Kyunkaleshwar Mahadev', 'Himalayan View', 'Peaceful', 'Apple Orchards'],
-    bestTime: 'March to June, September to November'
-  },
-  {
-    id: 40,
-    name: 'Mukteshwar',
-    category: 'hillstation',
-    image: 'https://images.unsplash.com/photo-1615966192539-f1731963b19a',
-    description: 'Mukteshwar, at 2,286m, is named after the 350-year-old Mukteshwar Dham temple. Famous for adventure activities like rock climbing, rappelling, and zip-lining. Chauli Ki Jali offers stunning valley views. Indian Veterinary Research Institute is located here.',
-    highlights: ['Mukteshwar Temple', 'Chauli Ki Jali', 'Adventure Activities', 'Rock Climbing', 'Sunset View', 'Fruit Orchards'],
-    bestTime: 'March to June, September to November'
-  }
-];
+/* MAP */
+.map{
+margin-top:50px;
+border-radius:20px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
 
-export const charDhamPackages = [
-  {
-    id: 'luxury',
-    name: 'Luxury Package',
-    category: 'luxury',
-    duration: '10 Days / 9 Nights',
-    image: 'https://images.unsplash.com/photo-1712733900711-d0b929d0d7cc',
-    description: 'Experience the divine Chardham Yatra in ultimate comfort with 5-star hotels, luxury vehicles, and premium services throughout your spiritual journey.',
-    inclusions: [
-      '5-Star Hotel Accommodation',
-      'Luxury AC SUV/Innova Crysta',
-      'All Meals (Breakfast, Lunch, Dinner)',
-      'Professional Driver & Guide',
-      'VIP Darshan Arrangements',
-      'Helicopter Service (Optional)',
-      'Complete Insurance Coverage',
-      'All Tolls & Parking Charges'
-    ],
-    destinations: ['Yamunotri', 'Gangotri', 'Kedarnath', 'Badrinath'],
-    priceNote: 'Contact for Pricing'
-  },
-  {
-    id: 'normal',
-    name: 'Standard Package',
-    category: 'normal',
-    duration: '9 Days / 8 Nights',
-    image: 'https://images.unsplash.com/photo-1708266942203-c731118e1f94',
-    description: 'Comfortable and affordable Chardham Yatra with quality hotels, convenient vehicles, and all essential services for a memorable pilgrimage.',
-    inclusions: [
-      '3-Star Hotel Accommodation',
-      'AC SUV/Innova Vehicle',
-      'Breakfast & Dinner Included',
-      'Experienced Driver',
-      'Temple Darshan Arrangements',
-      'All Tolls & Parking',
-      'Basic Medical Kit',
-      'All Government Taxes'
-    ],
-    destinations: ['Yamunotri', 'Gangotri', 'Kedarnath', 'Badrinath'],
-    priceNote: 'Contact for Pricing'
-  },
-  {
-    id: 'budget',
-    name: 'Budget Package',
-    category: 'cheap',
-    duration: '8 Days / 7 Nights',
-    image: 'https://images.unsplash.com/photo-1736914322688-89be02b72249',
-    description: 'Affordable Chardham darshan with budget hotels and shared transport. Complete the holy pilgrimage within your budget without compromising safety.',
-    inclusions: [
-      'Budget Hotels/Guesthouses',
-      'Shared Tempo Traveller',
-      'Breakfast Included',
-      'Experienced Driver',
-      'Temple Darshan',
-      'All Tolls & Parking',
-      'Basic Amenities'
-    ],
-    destinations: ['Yamunotri', 'Gangotri', 'Kedarnath', 'Badrinath'],
-    priceNote: 'Contact for Pricing'
-  }
-];
+/* FOOTER */
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+margin-top:60px;
+}
 
-export const testimonials = [
-  {
-    id: 1,
-    name: 'Rajesh Kumar',
-    location: 'Delhi',
-    rating: 5,
-    text: 'Excellent Chardham Yatra experience with HIMyatraa. All arrangements were perfect - hotels, transport, and the driver was very knowledgeable. Highly recommended for spiritual travelers!',
-    date: 'October 2024'
-  },
-  {
-    id: 2,
-    name: 'Priya Sharma',
-    location: 'Mumbai',
-    rating: 5,
-    text: 'Booked Mussoorie and Nainital tour. The entire trip was well-organized with timely pickups and drop-offs. The guide provided excellent information about each place. Great value for money!',
-    date: 'September 2024'
-  },
-  {
-    id: 3,
-    name: 'Amit Verma',
-    location: 'Bangalore',
-    rating: 5,
-    text: 'Chose HIMyatraa for Auli skiing trip and it was the most memorable experience of my life. All arrangements were spot-on. The budget package was very reasonable too.',
-    date: 'January 2024'
-  },
-  {
-    id: 4,
-    name: 'Sunita Devi',
-    location: 'Patna',
-    rating: 5,
-    text: 'Went to Kedarnath with family. HIMyatraa team took great care of everything. The arrangements were comfortable even for elderly members. Very satisfied with their service.',
-    date: 'June 2024'
-  }
-];
+/* WHATSAPP */
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 20px;
+border-radius:50px;
+text-decoration:none;
+font-weight:600;
+box-shadow:0 8px 20px rgba(0,0,0,0.3);
+}
+</style>
+</head>
 
-export const galleryImages = [
-  {
-    id: 1,
-    url: 'https://images.unsplash.com/photo-1712733900711-d0b929d0d7cc',
-    title: 'Badrinath Temple',
-    category: 'temples'
-  },
-  {
-    id: 2,
-    url: 'https://images.unsplash.com/photo-1649147313351-c86537fda0eb',
-    title: 'Kedarnath Temple',
-    category: 'temples'
-  },
-  {
-    id: 3,
-    url: 'https://images.unsplash.com/photo-1708266942203-c731118e1f94',
-    title: 'Gangotri Temple',
-    category: 'temples'
-  },
-  {
-    id: 4,
-    url: 'https://images.unsplash.com/photo-1610715936287-6c2ad208cdbf',
-    title: 'Nainital Lake',
-    category: 'destinations'
-  },
-  {
-    id: 5,
-    url: 'https://images.unsplash.com/photo-1615966192539-f1731963b19a',
-    title: 'Mussoorie Hills',
-    category: 'destinations'
-  },
-  {
-    id: 6,
-    url: 'https://images.unsplash.com/photo-1606220975728-f94e0d9ed642',
-    title: 'Rishikesh Ganges',
-    category: 'destinations'
-  },
-  {
-    id: 7,
-    url: 'https://images.unsplash.com/photo-1598186004076-e062b6555c53',
-    title: 'Auli Skiing',
-    category: 'adventure'
-  },
-  {
-    id: 8,
-    url: 'https://images.unsplash.com/photo-1463693396721-8ca0cfa2b3b5',
-    title: 'Chopta Trekking',
-    category: 'adventure'
-  },
-  {
-    id: 9,
-    url: 'https://images.unsplash.com/photo-1702053285107-b5a90aa97171',
-    title: 'Himalayan Peaks',
-    category: 'nature'
-  },
-  {
-    id: 10,
-    url: 'https://images.unsplash.com/photo-1669291481687-026754880645',
-    title: 'Kempty Falls',
-    category: 'nature'
-  },
-  {
-    id: 11,
-    url: 'https://images.unsplash.com/photo-1647617870380-efc71009fa2c',
-    title: 'Jim Corbett Wildlife',
-    category: 'nature'
-  },
-  {
-    id: 12,
-    url: 'https://images.unsplash.com/photo-1621861189516-3f4c3a3c98ef',
-    title: 'Kainchi Dham',
-    category: 'temples'
-  }
-];
-"
+<body>
+
+<nav>
+<h2><span>HIM</span><span>yatraa</span></h2>
+<div>
+<a href="#destinations">Destinations</a>
+<a href="#packages">Packages</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<header>
+<div>
+<h1>Luxury Tours in Uttarakhand</h1>
+<p>Char Dham • Honeymoon • Family Trips • Taxi Services</p>
+<a href="#contact" class="btn">Book Your Trip</a>
+</div>
+</header>
+
+<section id="destinations">
+<h2>Top Destinations</h2>
+<div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1627894481132-3bcfcdff1c7c"><h3>Kedarnath</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1595814436568-5c2f4b6e0d9a"><h3>Badrinath</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1565026057447-bc90b4b5d1a3"><h3>Nainital</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"><h3>Mussoorie</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1549887534-4d6c04f1a0d2"><h3>Auli</h3></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1587392380660-8e1a01fb9b31"><h3>Rishikesh</h3></div>
+</div>
+</section>
+
+<section id="packages">
+<h2>Premium Tour Packages</h2>
+<div class="packages">
+<div class="package"><h3>Char Dham Yatra</h3><p>Complete spiritual journey with hotel & transport.</p></div>
+<div class="package"><h3>Honeymoon Special</h3><p>Romantic luxury stay in hills.</p></div>
+<div class="package"><h3>Family Vacation</h3><p>Comfortable & affordable family tour plans.</p></div>
+<div class="package"><h3>Taxi Service</h3><p>Safe & reliable taxi across Uttarakhand.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<h2>Send Inquiry</h2>
+<form>
+<input type="text" placeholder="Your Name" required>
+<input type="tel" placeholder="Your Phone Number" required>
+<textarea rows="5" placeholder="Your Message"></textarea>
+<button type="submit">Submit Inquiry</button>
+</form>
+
+<div class="map">
+<iframe src="https://www.google.com/maps?q=Uttarakhand&output=embed"
+width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+</iframe>
+</div>
+</section>
+
+<footer>
+<p>📞 Call / WhatsApp: 8679490106</p>
+<p>© 2026 HIMyatraa Tours & Travels | All Rights Reserved</p>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/918679490106" target="_blank">
+WhatsApp Us
+</a>
+
+</body>
+</html>
